@@ -21,5 +21,6 @@ public class SalesOrder {
 	private String state;
 	private long totalAmount;
 	private String remark;
+	
 
 }
