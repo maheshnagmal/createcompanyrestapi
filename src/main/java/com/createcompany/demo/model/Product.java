@@ -1,24 +1,38 @@
-package com.createcompany.demo.model;
+package store_module.store.classes;
 
-
+import java.util.Arrays;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
+
+@Table(name = "PRODUCT")
+
 public class Product {
 	@Id
-	@GeneratedValue
-	private int productId;
-	private String productName;
-	private String productCode;
-	private String productType;
-	private String productUnit;
-	public int getProductId() {
-		return productId;
+    @GeneratedValue
+    int id;
+	
+	String productName;
+	int productQuantity;
+	String itemsName[];
+	String itemsQuantity[];
+	
+	
+	public int getId() {
+		return id;
 	}
-	public void setProductId(int productId) {
-		this.productId = productId;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getProductName() {
 		return productName;
@@ -26,28 +40,28 @@ public class Product {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public String getProductCode() {
-		return productCode;
+	public int getProductQuantity() {
+		return productQuantity;
 	}
-	public void setProductCode(String productCode) {
-		this.productCode = productCode;
+	public void setProductQuantity(int productQuantity) {
+		this.productQuantity = productQuantity;
 	}
-	public String getProductType() {
-		return productType;
+	public String[] getItemsName() {
+		return itemsName;
 	}
-	public void setProductType(String productType) {
-		this.productType = productType;
+	public void setItemsName(String[] itemsName) {
+		this.itemsName = itemsName;
 	}
-	public String getProductUnit() {
-		return productUnit;
+	public String[] getItemsQuantity() {
+		return itemsQuantity;
 	}
-	public void setProductUnit(String productUnit) {
-		this.productUnit = productUnit;
+	public void setItemsQuantity(String[] itemsQuantity) {
+		this.itemsQuantity = itemsQuantity;
 	}
 	@Override
 	public String toString() {
-		return "AddProduct [productId=" + productId + ", productName=" + productName + ", productCode=" + productCode
-				+ ", productType=" + productType + ", productUnit=" + productUnit + "]";
+		return "Product [productName=" + productName + ", productQuantity=" + productQuantity + ", itemsName="
+				+ Arrays.toString(itemsName) + ", itemsQuantity=" + Arrays.toString(itemsQuantity) + "]";
 	}
-	
+
 }
