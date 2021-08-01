@@ -1,11 +1,12 @@
-package store_module.store.Repository;
+package com.createcompany.demo.repo;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import store_module.store.classes.Item;
+import com.createcompany.demo.model.Item;
+
 
 public interface ItemRepository extends JpaRepository<Item,Integer> {
 

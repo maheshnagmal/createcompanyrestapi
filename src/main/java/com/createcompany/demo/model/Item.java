@@ -1,4 +1,4 @@
-package store_module.store.classes;
+package com.createcompany.demo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

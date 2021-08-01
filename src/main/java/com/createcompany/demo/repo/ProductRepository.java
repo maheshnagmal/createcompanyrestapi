@@ -1,9 +1,9 @@
 
-package store_module.store.Repository;
-import store_module.store.classes.*;
+package com.createcompany.demo.repo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.createcompany.demo.model.Product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
